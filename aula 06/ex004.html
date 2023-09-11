@@ -9,10 +9,11 @@
     <script>
         var nome = window.prompt("Informe seu nome: ")
         var sobrenome = window.prompt("Informe seu sobrenome: ")
-        var salario =  Number(window.prompt("Informe seu salário mensal em REAL: ")).toFixed(2).replace('.', ',').toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
-        var dolar = Number(salario/4.88)
-        var euro = Number(salario/5.28)
-        document.write(`Seu nome é ${nome.toUpperCase()} ${sobrenome.toLocaleLowerCase()} <br> Você possui (${salario} Reais),(${dolar} Dolares) e (${euro} Euros)`)
+        var salario =  Number(window.prompt("Informe seu salário mensal em real: "))
+        var dolar = Number(salario/4.88).toFixed(2)
+        var euro = Number(salario/5.28).toFixed(2)
+        var peso = Number(salario*72.2).toFixed(2)
+        document.write(`Seu nome é ${nome.toUpperCase()} ${sobrenome.toLocaleLowerCase()} <br> Você possui (${salario} Reais),(${dolar} Dolares), (${euro} Euros) e (${peso} Pesos)`)
     </script>
 </body>
 </html>

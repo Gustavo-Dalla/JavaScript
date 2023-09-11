@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos com o DOM</title>
+    <meta http-equiv="refresh" content="1.0">
+    <style>
+        body{
+            background-color:antiquewhite ;
+            font-size: medium;
+            color: tomato;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Começo dos estudos com DOM em JavaScript</h1>
+    <p id="p0" style="display: none;">Primeiros passos com o <strong>DOM</strong></p>
+    <p style="display: none;"><u>JavaScript</u></p>
+    <div class="botao">Clique Aqui!</div>
+    <script>
+        //window.document.write(window.navigator.appName)
+        var p1 = window.document.getElementsByTagName('p')[1]
+        var p0 = window.document.getElementById('p0')
+        var button = window.document.querySelector('div.botao')
+        window.document.write(p0.innerText)
+        window.document.write(p1.innerHTML)
+        window.document.write(button.innerHTML)
+        button.style.background = 'blue'
+        window.documnet.write(p1.innerText)//Ñ funciona formatação do texto
+    </script>
+</body>
+</html>
