@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <main>
+        <section>
+            <div><p>Digite o Ano de Nascimento</p><input type="number" id="ano" min="0"></div>
+            <div>
+                <p>Sexo:</p>
+                <input type="radio" name="radsex" id="homem" checked>
+                <label for="homem">Masculino</label>
+                <input type="radio" name="radsex" id="mulher">
+                <label for="mulher">Feminino</label>
+            </div>
+            <div>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </div>
+            <p id="res"></p>
+        </section>
+    </main>
+    <footer>
+        <p>Curso em Vídeo - Gustavo Guanabara</p>
+    </footer>
+</body>
+</html>
