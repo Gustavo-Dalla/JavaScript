@@ -1,4 +1,25 @@
-function resultado(){
+//RESOLUÇÃO
+
+function tabuada(){
+    let num = document.getElementById('txtn')
+    let tab = document.getElementById('seltab')
+    if (num.value.length == 0){
+        window.alert(`Por favor, digite um número!`)
+    }else{
+        let n = Number(num.value)
+        let c = 1
+        tab.innerHTML = ''
+        while (c <= 10){
+            let item = document.createElement('option')
+            item.text = `${n}*${c} = ${n*c}`
+            item.value = `tab${c}`
+            tab.appendChild(item)
+            c++
+        }
+    }
+}
+
+/*function resultado(){
     var num = Number(window.document.getElementById('num').value)
     var vezes = 0
     while(vezes<=10){
@@ -6,7 +27,8 @@ function resultado(){
         document.write(`${num}*${vezes} = ${conta}`)
         vezes++
     }
-}
+}*/
+
     //O código apenas funciona com o var num dentro da função. Explicação:
     
     /*Em JavaScript, as variáveis têm escopos, que determinam onde uma variável pode ser acessada e usada. Existem dois principais tipos de escopo em JavaScript:
