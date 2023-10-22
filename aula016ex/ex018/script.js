@@ -8,7 +8,7 @@ function add(){
         item.value = num
         item.text = `Valor ${num} adicionado`
         tab.appendChild(item)
-}else if (num >100 || num < 1){
+}else if (num > 100 || num < 1){
     alert(`O número não está entre 1 e 100! Digite novamente.`)
 }
 if(num.length == 0){
@@ -25,12 +25,12 @@ function fim(){
     for(i=0;i<valor.length;i++){
         soma += Number(valor[i]) //Declarando number pois estava concatenando strings e não somando
     }
-    valor.sort()
+    valor.sort(function(a, b) {//Sort é unicode ou seja -> [1, 10, 2, 20, 3, 30...] por isso faz esta função para colocar em crescente
+        return a - b; //Dentro do método SORT o traço - compara e não subtrai, neste caso compara a com b e retorna os valores em ordem crescente
+    }); 
     txt.innerHTML += `<p>Ao todo temos ${valor.length} números cadastrados</p>`
     txt.innerHTML += `<p>O maior valor informado foi ${valor[valor.length - 1]}</p>`//O menos 1 = length de 4 não existe pois ultrapassa 1 pois o índice da array começa no 0 exeplo ([0,1,2,3] lenght=4 -> volta undefined pois o ultimo número é 3)
     txt.innerHTML += `<p>O menor valor informado foi ${valor[0]}</p>`
     txt.innerHTML += `<p>Somando todos os valores, temos ${soma}</p>`
     txt.innerHTML += `<p>A média dos valores digitados é ${soma/valor.length}</p>`
 }
-
-/*A ARRUMAR: 1- Quando clica no botao finalizar ele adiciona o texto mais de uma vez / 2- Quando o num está vazio aparece 2 alerts*/
